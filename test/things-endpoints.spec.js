@@ -141,7 +141,6 @@ describe('Things Endpoints', function() {
       })
 
       it('removes XSS attack content', () => {
-        console.log('failing here')
         return supertest(app)
           .get(`/api/things/${maliciousThing.id}`)
           .set('Authorization', helpers.makeAuthHeader(testUser))
